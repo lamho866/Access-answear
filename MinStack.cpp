@@ -1,3 +1,33 @@
+/*
+
+It needs one stack to save the stack element
+It needs another to save the current miuimum element the stack , which use for speed up
+
+Example :
+stk : 5 2 2 3
+minstk : 2 2
+
+push(1)
+
+stk : 5 2 2 3 1
+minstk : 2 2 1
+
+pop()
+
+stk : 5 2 2 3
+minstk : 2 2
+
+pop()
+
+stk : 5 2 2
+minstk : 2 2
+
+pop() <=  if we don't push the same minimum element, it will happens error
+
+stk : 5 2
+minstk : 2 
+
+*/
 class MinStack {
 public:
     /** initialize your data structure here. */
@@ -32,32 +62,7 @@ private:
     vector<int> stk; // save the stack value
     vector<int> minStk;// save the current minimum value on the stack
 };
-/*
-Example :
-stk : 5 2 2 3
-minstk : 2 2
 
-push(1)
-
-stk : 5 2 2 3 1
-minstk : 2 2 1
-
-pop()
-
-stk : 5 2 2 3
-minstk : 2 2
-
-pop()
-
-stk : 5 2 2
-minstk : 2 2
-
-pop() <=  if we don't push the same minimum element, it will happens error
-
-stk : 5 2
-minstk : 2 
-
-*/
 
 /**
  * Your MinStack object will be instantiated and called as such:
