@@ -8,16 +8,19 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+
+//step 1: take all element in the singly-linked list.
+//setp 2: check it whether is Palindrome.
 class Solution {
 public:
     bool isPalindrome(ListNode* head) {
 
-        //take all element in the singly-linked list.
+        //step 1:take all element in the singly-linked list.
         while(head != nullptr)
             vtr.push_back(head->val), head = head -> next;
         j = vtr.size() - 1;
         
-        //check it whether is Palindrome
+        //step 2:check it whether is Palindrome
         while(i < j)
         {
             if(vtr[i] != vtr[j])
@@ -31,5 +34,3 @@ private:
     int i = 0, j = 0;
     vector<int> vtr; //save the singly-linked element
 };
-//step 1: take all element in the singly-linked list.
-//setp 2: check it whether is Palindrome.
